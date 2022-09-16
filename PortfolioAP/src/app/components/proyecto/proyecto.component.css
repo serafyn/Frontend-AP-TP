@@ -1,0 +1,20 @@
+.row {
+    padding: 20px;
+    background-color: darkgray;
+    ;
+}
+
+.contenedor {
+    width: auto;
+}
+
+.textoProyecto, .imagenProyecto {
+    display: inline-block;
+    text-align: justify;
+
+}
+
+.imgProyecto {
+    box-shadow: 10px 10px 30px black;
+
+}
