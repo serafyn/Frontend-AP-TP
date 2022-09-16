@@ -1,0 +1,9 @@
+.row {
+    background-color: darkgray;
+    text-align: center;
+
+}
+
+.enLinea {
+    display: inline-block;
+}
