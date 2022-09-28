@@ -20,17 +20,18 @@ div {
         border-radius: 100%;
         box-shadow: 3px 3px 3px gray;
         left: 3%;
-        top: 600px;
+        top: 390px;
     }
 }
 
 @media (max-width:575px) {
     #fotoPerfil {
         position: absolute;
+        align-items: center;
         width: 30%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px gray;
         left: 33%;
-        top: 630px;
+        top: 300px;
     }
 }

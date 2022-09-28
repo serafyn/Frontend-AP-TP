@@ -4,3 +4,34 @@ img {
     padding: 0px 1px 0px 1px;
 
 }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.redes img {
+    margin: 2px;
+}
+
+
+
+@media (max-width: 575px) {
+
+
+    .container {
+        flex-direction: column;
+    }
+
+    .redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes img {
+        margin: 3px;
+    }
+}
