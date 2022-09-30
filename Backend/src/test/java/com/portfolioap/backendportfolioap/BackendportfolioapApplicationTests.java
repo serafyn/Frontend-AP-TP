@@ -1,10 +1,10 @@
-package com.portfolioap.tpap;
+package com.portfolioap.backendportfolioap;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TpapApplicationTests {
+class BackendportfolioapApplicationTests {
 
 	@Test
 	void contextLoads() {

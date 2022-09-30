@@ -1,13 +1,13 @@
-package com.portfolioap.tpap;
+package com.portfolioap.backendportfolioap;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TpapApplication {
+public class BackendportfolioapApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TpapApplication.class, args);
+		SpringApplication.run(BackendportfolioapApplication.class, args);
 	}
 
 }

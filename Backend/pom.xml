@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.portfolioap</groupId>
-	<artifactId>tpap</artifactId>
+	<artifactId>backendportfolioap</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>tpap</name>
-	<description>Trabajo practico argentnina programa</description>
+	<name>backendportfolioap</name>
+	<description>backen del porfolio de argentina programa</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
