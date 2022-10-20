@@ -41,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
       innerStrokeColor: "#C7E596",
       animationDuration: 300
 
-    })
+    }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
