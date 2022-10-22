@@ -8,6 +8,6 @@ package com.portfolioap.backendportfolioap.Security.Enums;
  *
  * @author 20190853749
  */
-public class RolNombre {
-    
+public enum RolNombre {
+    ROL_ADMIN, ROL_USER
 }
