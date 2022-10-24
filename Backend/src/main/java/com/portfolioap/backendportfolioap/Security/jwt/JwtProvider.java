@@ -2,11 +2,11 @@
 package com.portfolioap.backendportfolioap.Security.jwt;
 
 import com.portfolioap.backendportfolioap.Security.Entity.UsuarioPrincipal;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties.Authentication;
+import org.springframework.security.core.Authentication;
+
 
 
 import org.springframework.stereotype.Component;
@@ -23,6 +23,7 @@ public class JwtProvider {
     
     public String generateTaken(Authentication authentication){
         UsuarioPrincipal usuarioPrincipal = (UsuarioPrincipal) authentication.getPrincipal();
+        return null;
       
     }
 }
