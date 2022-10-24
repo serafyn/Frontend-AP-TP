@@ -1,8 +1,13 @@
 package com.portfolioap.backendportfolioap.Security.Controller;
 
+import com.portfolioap.backendportfolioap.Security.Dto.JwtDto;
+import com.portfolioap.backendportfolioap.Security.Dto.LoginUsuario;
+import com.portfolioap.backendportfolioap.Security.Dto.NuevoUsuario;
 import com.portfolioap.backendportfolioap.Security.Entity.Rol;
+
 import com.portfolioap.backendportfolioap.Security.Entity.Usuario;
 import com.portfolioap.backendportfolioap.Security.Enums.RolNombre;
+
 import com.portfolioap.backendportfolioap.Security.Service.RolService;
 import com.portfolioap.backendportfolioap.Security.Service.UsuarioService;
 import com.portfolioap.backendportfolioap.Security.jwt.JwtProvider;
@@ -51,45 +56,46 @@ public class AuthController {
             return new ResponseEntity(new Mensaje("Estas Agregando caracteres no validos"), HttpStatus.BAD_REQUEST);
         }
 
-        if (usuarioService.existsByNombreUsuario(nombreUsuario.getNombreUsuario())) {
+        if (usuarioService.existsByNombreUsuario(nuevoUsuario.getNombreUsuario())) {
             return new ResponseEntity(new Mensaje("Usuario ya registrado"), HttpStatus.BAD_REQUEST);
         }
 
-        if (usuarioService.existsByEmail(nombreUsuario.getEmail())) {
+        if (usuarioService.existsByEmail(nuevoUsuario.getEmail())) {
             return new ResponseEntity(new Mensaje("Email ya registrado"), HttpStatus.BAD_REQUEST);
         }
-        
+
         Usuario usuario = new Usuario(nuevoUsuario.getNombre(), nuevoUsuario.getNombreUsuario(),
                 nuevoUsuario.getEmail(), passwordEncoder.encode(nuevoUsuario.getPassword()));
-        
-        
+
         Set<Rol> roles = new HashSet<>();
-        roles.add(rolService.getByRolNombre.ROL_USER).get());
-        
-        if(nuevoUsuario.getRoles().contains("admin"))
-            roles.add(rolService.getByRolNombre(RolNombre.ROL_ADMIN).get());
+        roles.add(rolService.rolGetByRolNombre(RolNombre.ROL_USER).get());
+        if (nuevoUsuario.getRoles().contains("admin")) {
+            roles.add(rolService.rolGetByRolNombre(RolNombre.ROL_ADMIN).get());
+        }
         usuario.setRoles.(roles);
         usuarioService.save(usuario);
-        
-        return new ReponseEntity(new Mensaje("Usuario creado"),HttpStatus.CREATED);
+
+        return new ReponseEntity(new Mensaje("Usuario creado"), HttpStatus.CREATED);
+
     }
-    
+
     @PostMapping("/login")
-    public ResponseEntity<JwtDTO> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
-        if(bindingResult.hasErrors())
+    public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Mensaje("Campos invalidos"), HttpStatus.BAD_REQUEST);
-        
+        }
+
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 loginUsuario.getNombreUsuario(), loginUsuario.getPassword()));
-        
+
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        
+
         String jwt = jwtProvider.generateTaken(authentication);
-        
+
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        
-        JvtDto jwtDto = new JvtDto(jwt, userDetails.getUserName(), userDetails.getAuthorities());
-        
+
+        JwtDto jwtDto = new JwtDto(jwt, userDetails.getUsername(), userDetails.getAuthorities());
+
         return new ResponseEntity(jwtDto, HttpStatus.OK);
     }
 }
