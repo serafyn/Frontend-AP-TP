@@ -45,14 +45,13 @@ public class NuevoUsuario {
         this.password = password;
     }
 
-    public <any> getRoles() {
+    public Set<String> getRoles() {
         return roles;
     }
 
-    public void setRoles(<any> roles) {
+    public void setRoles(Set<String> roles) {
         this.roles = roles;
     }
-    
-    
+
     
 }
