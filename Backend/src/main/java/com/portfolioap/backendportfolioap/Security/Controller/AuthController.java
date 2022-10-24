@@ -4,10 +4,8 @@ import com.portfolioap.backendportfolioap.Security.Dto.JwtDto;
 import com.portfolioap.backendportfolioap.Security.Dto.LoginUsuario;
 import com.portfolioap.backendportfolioap.Security.Dto.NuevoUsuario;
 import com.portfolioap.backendportfolioap.Security.Entity.Rol;
-
 import com.portfolioap.backendportfolioap.Security.Entity.Usuario;
 import com.portfolioap.backendportfolioap.Security.Enums.RolNombre;
-
 import com.portfolioap.backendportfolioap.Security.Service.RolService;
 import com.portfolioap.backendportfolioap.Security.Service.UsuarioService;
 import com.portfolioap.backendportfolioap.Security.jwt.JwtProvider;
@@ -52,30 +50,31 @@ public class AuthController {
 
     @PostMapping("/nuevo")
     public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
+        if (bindingResult.hasErrors()) 
             return new ResponseEntity(new Mensaje("Estas Agregando caracteres no validos"), HttpStatus.BAD_REQUEST);
-        }
+        
 
-        if (usuarioService.existsByNombreUsuario(nuevoUsuario.getNombreUsuario())) {
+        if (usuarioService.existsByNombreUsuario(nuevoUsuario.getNombreUsuario())) 
             return new ResponseEntity(new Mensaje("Usuario ya registrado"), HttpStatus.BAD_REQUEST);
-        }
+        
 
-        if (usuarioService.existsByEmail(nuevoUsuario.getEmail())) {
+        if (usuarioService.existsByEmail(nuevoUsuario.getEmail())) 
             return new ResponseEntity(new Mensaje("Email ya registrado"), HttpStatus.BAD_REQUEST);
-        }
+        
 
         Usuario usuario = new Usuario(nuevoUsuario.getNombre(), nuevoUsuario.getNombreUsuario(),
                 nuevoUsuario.getEmail(), passwordEncoder.encode(nuevoUsuario.getPassword()));
 
         Set<Rol> roles = new HashSet<>();
-        roles.add(rolService.rolGetByRolNombre(RolNombre.ROL_USER).get());
-        if (nuevoUsuario.getRoles().contains("admin")) {
-            roles.add(rolService.rolGetByRolNombre(RolNombre.ROL_ADMIN).get());
-        }
-        usuario.setRoles.(roles);
+        roles.add(rolService.getRolByRolNombre(RolNombre.ROL_USER).get());
+        
+        if (nuevoUsuario.getRoles().contains("admin")) 
+            roles.add(rolService.getRolByRolNombre(RolNombre.ROL_ADMIN).get());
+        
+        usuario.setRoles(roles);
         usuarioService.save(usuario);
 
-        return new ReponseEntity(new Mensaje("Usuario creado"), HttpStatus.CREATED);
+        return new ResponseEntity(new Mensaje("Usuario creado"), HttpStatus.CREATED);
 
     }
 
