@@ -1,8 +1,14 @@
 
 package com.portfolioap.backendportfolioap.Security.jwt;
 
+import com.portfolioap.backendportfolioap.Security.Entity.UsuarioPrincipal;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties.Authentication;
+
+
 import org.springframework.stereotype.Component;
 
 
@@ -10,6 +16,13 @@ import org.springframework.stereotype.Component;
 public class JwtProvider {
     private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
     
+    @Value("${jwt.secret}")
     private String secret;
-    private Int expiration
+    @Value("${jwt.expiration}")
+    private int expiration; 
+    
+    public String generateTaken(Authentication authentication){
+        UsuarioPrincipal usuarioPrincipal = (UsuarioPrincipal) authentication.getPrincipal();
+      
+    }
 }
