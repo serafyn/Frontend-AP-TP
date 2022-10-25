@@ -1,11 +1,11 @@
 import { ThisReceiver } from "@angular/compiler";
 
 export class LoginUsuario {
-    nombreUsuario: String;
-    password: String;
+    nombreUsuario: string;
+    password: string;
 
     // constructor
-    constructor(nombreUsuario: String, password: String) {
+    constructor(nombreUsuario: string, password: string) {
         this.nombreUsuario = nombreUsuario;
         this.password = password;
     }
