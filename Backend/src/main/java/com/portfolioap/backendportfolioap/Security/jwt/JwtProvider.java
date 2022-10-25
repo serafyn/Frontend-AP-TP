@@ -1,5 +1,5 @@
 
-package com.portfolioap.backendportfolioap.Security.jwt;
+package com.portfolioap.backendportfolioap.Security.Jwt;
 
 import com.portfolioap.backendportfolioap.Security.Entity.UsuarioPrincipal;
 import io.jsonwebtoken.ExpiredJwtException;

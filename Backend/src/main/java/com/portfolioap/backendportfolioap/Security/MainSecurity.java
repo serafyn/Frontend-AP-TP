@@ -1,7 +1,9 @@
 package com.portfolioap.backendportfolioap.Security;
 
 import com.portfolioap.backendportfolioap.Security.Service.UserDetailsImpl;
-import com.portfolioap.backendportfolioap.Security.jwt.JwtTokenFilter;
+
+import com.portfolioap.backendportfolioap.Security.Jwt.JwtTokenFilter;
+import com.portfolioap.backendportfolioap.Security.jwt.JwtEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
