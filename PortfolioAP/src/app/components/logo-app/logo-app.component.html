@@ -1,1 +1,17 @@
-<img id="logoApp" class="containerLogo" src="../../../assets/logos/APLogo.png" alt="logoApp">
+<div class="row">
+    <div class="container">
+        <img id="logoApp" class="containerLogo" src="../../../assets/logos/APLogo.png" alt="logoApp">
+    </div>
+    <div class="container">
+        <a href="http://"><img src="../../../assets/logos/linkedin.png" id="linkedin"></a>
+        <a href="http://"><img src="../../../assets/logos/facebook.png" id="facebook"></a>
+        <a href="http://"><img src="../../../assets/logos/github.png" id="github"></a>
+        <a href="http://"><img src="../../../assets/logos/instagram.png" id="instagram"></a>
+        <a href="http://"><img src="../../../assets/logos/twitter.png" id="twitter"></a>
+        <button type="button" class="btn btn-outline-secondary mx-2" (click)="login()"
+            *ngIf="!isLogged">Ingresar</button>
+        <button type="button" class="btn btn-outline-secondary mx-2" (click)="onLogOut()"
+            *ngIf="isLogged">Salir</button>
+
+    </div>
+</div>
