@@ -1,55 +1,38 @@
-#logoApp {
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes {
+    margin-right: 0.5em;
+}
+
+#logoAP {
     width: 150px;
 }
 
+img {
+    width: 50px;
+}
+
+.btn {
+    border-width: medium;
+}
+
+/*--- Para la vista de celular ---*/
 @media (max-width: 575px) {
-
-
-    .containerLogo {
-        flex-direction: column;
-    }
-
-    #logoApp {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    img {
-        width: 50px;
-        margin: 0px 2px 0px 2px;
-        padding: 0px 1px 0px 1px;
-
-    }
-
     .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
     }
 
+    .redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .redes img {
-        margin: 2px;
-    }
-
-
-
-    @media (max-width: 575px) {
-
-
-        .container {
-            flex-direction: column;
-        }
-
-        .redes {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .redes img {
-            margin: 3px;
-        }
+        margin: 0.2em;
     }
 }
