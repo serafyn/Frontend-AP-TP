@@ -4,6 +4,11 @@
     align-items: center;
 }
 
+a {
+    margin: auto;
+    padding: 2px;
+}
+
 .redes {
     margin-right: 0.5em;
 }
