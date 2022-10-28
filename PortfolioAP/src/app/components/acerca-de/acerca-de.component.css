@@ -15,12 +15,17 @@ div {
 
 @media (min-width:576px) {
     #fotoPerfil {
-        position: absolute;
-        width: 15%;
+
+        width: 85%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px gray;
-        left: 3%;
-        top: 390px;
+
+    }
+
+    .descripcion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 

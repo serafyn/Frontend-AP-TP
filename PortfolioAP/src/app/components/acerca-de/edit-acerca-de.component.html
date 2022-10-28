@@ -18,9 +18,12 @@
                         [(ngModel)]="persona.descripcion" required>
                 </div>
                 <div class="form-group">
-                    <label for="img">Descripcion de sus estudios</label>
+                    <label for="img">Foto de perfil</label>
                     <input type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img"
                         (change)="uploadImage($event)" accept=".gif, .png, .svg, .jpg, .jpeg">
+                </div>
+                <div class="imagen">
+                    <img [src]="imageService.url" alt="Foto de perfil" width="200px">
                 </div>
                 <button class="btn btn-success">
                     Editar persona
