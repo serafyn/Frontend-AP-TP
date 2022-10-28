@@ -1,7 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
+
 
 @Component({
   selector: 'app-newproyecto',
@@ -13,7 +15,7 @@ export class NewProyectoComponent implements OnInit {
   descripcionProyecto: string;
   linkproyecto: string;
   //imagen por default
-  imgproyecto: string = '../../../assets/portfolio.png';
+  imgproyecto: string = '';
 
   constructor(private proyService: ProyectoService, private router: Router) { }
 
