@@ -26,6 +26,7 @@ import { EditeducacionComponent } from './components/educacion/editeducacion.com
 import { NewSkillComponent } from './components/hys/new-skill.component';
 import { EditSkillComponent } from './components/hys/edit-skill.component';
 import { HysComponent } from './components/hys/hys.component';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import { HysComponent } from './components/hys/hys.component';
     NewSkillComponent,
     EditSkillComponent,
     HysComponent,
+    EditAcercaDeComponent,
 
   ],
   imports: [
