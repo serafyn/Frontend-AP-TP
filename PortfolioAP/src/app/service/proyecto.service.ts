@@ -9,7 +9,7 @@ import { Proyecto } from '../model/proyecto';
 })
 export class ProyectoService {
   //private URL = 'https://portfolioap-2022.herokuapp.com/proyecto';
-  URL = environment.URL + 'proyecto/';
+  URL = environment.URL + 'proyecto';
 
   constructor(private http: HttpClient) { }
 
