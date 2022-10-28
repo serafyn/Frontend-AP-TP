@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscriber } from 'rxjs';
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from '../../service/persona.service';
+import { TokenService } from '../../service/token.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -10,12 +10,21 @@ import { PersonaService } from '../../service/persona.service';
 })
 export class AcercaDeComponent implements OnInit {
 
-  persona: persona = new persona("", "", "");
+  persona: persona = null;
 
-  constructor(public PersonaService: PersonaService) { }
-
+  constructor(public PersonaService: PersonaService, private tokenService: TokenService) { }
+  isLogged = false;
   ngOnInit(): void {
-    this.PersonaService.getPersona().subscribe(data => { this.persona = data })
+    this.cargarPersona();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
+  cargarPersona() {
+    this.PersonaService.detail(1).subscribe(data => { this.persona = data }
+    )
+  }
 }
