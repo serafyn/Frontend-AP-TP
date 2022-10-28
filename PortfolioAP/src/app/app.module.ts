@@ -27,9 +27,11 @@ import { NewSkillComponent } from './components/hys/new-skill.component';
 import { EditSkillComponent } from './components/hys/edit-skill.component';
 import { HysComponent } from './components/hys/hys.component';
 import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideStorage,getStorage } from '@angular/fire/storage';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+import { EditProyectoComponent } from './components/proyecto/editproyecto.component';
+import { NewProyectoComponent } from './components/proyecto/newproyecto.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +55,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     EditSkillComponent,
     HysComponent,
     EditAcercaDeComponent,
+    EditProyectoComponent,
+    NewProyectoComponent,
 
   ],
   imports: [
