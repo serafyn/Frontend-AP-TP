@@ -8,7 +8,7 @@ export class persona {
     constructor(nombre: string, apellido: string, descripcion: string, img: string) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.descripcion;
+        this.descripcion = descripcion;
         this.img = img;
     }
 }
