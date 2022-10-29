@@ -6,12 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { LogoAppComponent } from './components/logo-app/logo-app.component';
-import { SocialComponent } from './components/social/social.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -38,11 +36,9 @@ import { NewProyectoComponent } from './components/proyecto/newproyecto.componen
     HeaderComponent,
     BannerComponent,
     LogoAppComponent,
-    SocialComponent,
     AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
-    SkillsComponent,
     ProyectoComponent,
     FooterComponent,
     HomeComponent,
