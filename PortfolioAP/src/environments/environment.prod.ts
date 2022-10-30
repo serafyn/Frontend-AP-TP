@@ -1,13 +1,13 @@
 export const environment = {
   firebase: {
-    projectId: 'frontendap-f4505',
-    appId: '1:248725747042:web:fd7c0dbae67e00f4d8683b',
-    storageBucket: 'frontendap-f4505.appspot.com',
+    projectId: 'frontend-7033b',
+    appId: '1:157786984201:web:f05777faf22ee278888dd8',
+    storageBucket: 'frontend-7033b.appspot.com',
     locationId: 'southamerica-east1',
-    apiKey: 'AIzaSyAnmY_YgWYyrx_XlXROdX70xo8pU5FqARc',
-    authDomain: 'frontendap-f4505.firebaseapp.com',
-    messagingSenderId: '248725747042',
-    measurementId: 'G-HS570FFK3N',
+    apiKey: 'AIzaSyDI4DV4Uml1z4585OdZEZdZkJYLaZhMJUE',
+    authDomain: 'frontend-7033b.firebaseapp.com',
+    messagingSenderId: '157786984201',
   },
-  production: true
+  production: true,
+  URL: "https://backendportfolioapintegrador.herokuapp.com/"
 };
