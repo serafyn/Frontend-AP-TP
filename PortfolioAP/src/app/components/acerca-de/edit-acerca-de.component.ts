@@ -11,7 +11,11 @@ import { ImageService } from 'src/app/service/image.service';
 })
 export class EditAcercaDeComponent implements OnInit {
   persona: persona = null;
-  constructor(private activatedRouter: ActivatedRoute, private personasService: PersonaService, private router: Router, public imageService: ImageService) { }
+  constructor(
+    private activatedRouter: ActivatedRoute,
+    private personasService: PersonaService,
+    private router: Router,
+    public imageService: ImageService) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];

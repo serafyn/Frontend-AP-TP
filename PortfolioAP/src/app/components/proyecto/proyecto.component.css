@@ -6,6 +6,7 @@
 
 .contenedor {
     width: auto;
+    background-color: aqua;
 }
 
 .textoProyecto, .imagenProyecto {
