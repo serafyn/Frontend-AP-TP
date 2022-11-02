@@ -1,5 +1,5 @@
 <div class="row">
-    <h1>Educacion</h1>
+    <h3>Educacion</h3>
     <div class="col-lg-2">
         <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
             Agregar Educacion
@@ -12,7 +12,7 @@
             <tbody>
                 <tr *ngFor="let Educacion of educacion">
                     <td>
-                        <h2>{{Educacion.nombreE}}</h2>
+                        <h4>{{Educacion.nombreE}}</h4>
                     </td>
                     <td>{{Educacion.descripcionE}}</td>
                     <td *ngIf="isLogged">

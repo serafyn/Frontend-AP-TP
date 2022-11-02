@@ -1,4 +1,10 @@
 app-social {
     float: right;
     margin-top: 25px;
+
+}
+
+.container-fluid {
+    padding: 0%;
+    margin: 0%;
 }
