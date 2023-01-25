@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "frontend-7033b"
+  },
+  "targets": {
+    "frontend-7033b": {
+      "hosting": {
+        "PortfolioAP": [
+          "frontend-7033b"
+        ]
+      }
+    }
   }
 }

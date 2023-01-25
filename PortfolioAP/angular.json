@@ -97,6 +97,16 @@
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "PortfolioAP:build:production",
+            "firebaseProject": "frontend-7033b",
+            "firebaseHostingSite": "frontend-7033b"
+          }
         }
       }
     }

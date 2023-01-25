@@ -10,5 +10,5 @@ export const environment = {
     measurementId: 'G-HS570FFK3N',
   },
   production: true,
-  URL: "https://backendportfolioapintegrador.herokuapp.com/"
+  URL: "https://backend-ap-serafyn.koyeb.app/"
 };
